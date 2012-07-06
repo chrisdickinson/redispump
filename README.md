@@ -10,6 +10,15 @@ $ tail -f /var/log/nginx/error.log | redispump -c channelname -a localhost:6379 
 
 ````
 
+## Installation
+
+````sh
+
+$ npm install -g redispump
+# yay, you're done
+
+````
+
 ## CLI
 
 #### -c [channelname]
