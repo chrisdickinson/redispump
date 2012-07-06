@@ -1,0 +1,32 @@
+{
+  "name": "redispump",
+  "version": "0.0.0",
+  "description": "pump stdout to redis",
+  "main": "index.js",
+  "bin": {
+    "redispump": "./bin/redispump"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdickinson/redispump.git"
+  },
+  "keywords": [
+    "redis",
+    "pump",
+    "pipe",
+    "cli",
+    "pubsub"
+  ],
+  "author": "Chris & Wraithan",
+  "license": "MIT",
+  "dependencies": {
+    "JSONStream": "~0.3.0",
+    "nopt": "~1.0.10",
+    "sax": "~0.4.0",
+    "redis": "~0.7.2"
+  },
+  "preferGlobal": true
+}
