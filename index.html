@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Redispump by chrisdickinson</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Redispump</h1>
+        <p>pipe stdout to a redis pubsub channel</p>
+
+        <p class="view"><a href="https://github.com/chrisdickinson/redispump">View the Project on GitHub <small>chrisdickinson/redispump</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/chrisdickinson/redispump/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/chrisdickinson/redispump/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/chrisdickinson/redispump">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>redispump</h1>
+
+<p>A command line tool to pump arbitrary data to a redis pubsub channel.</p>
+
+<div class="highlight">
+<pre>
+<span class="nv">$ </span>tail -f /var/log/nginx/error.log | redispump -c channelname
+<span class="nv">$ </span>tail -f /var/log/nginx/error.log | redispump -c channelname -a localhost:6379
+<span class="nv">$ </span>tail -f /var/log/nginx/error.log | redispump -c channelname -a localhost:6379 --mimetype text/plain
+
+</pre>
+</div>
+
+
+<h2>Installation</h2>
+
+<div class="highlight">
+<pre>
+<span class="nv">$ </span>npm install -g redispump
+<span class="c"># yay, you're done</span>
+
+</pre>
+</div>
+
+
+<h2>CLI</h2>
+
+<h4>-c [channelname]</h4>
+
+<h4>--channel [channelname]</h4>
+
+<p><strong>Required.</strong> The name of the channel to publish to.</p>
+
+<h4>-a [host:port]</h4>
+
+<h4>--addr [host:port]</h4>
+
+<h4>--address [host:port]</h4>
+
+<p>The host and port of the redis server to publish to.</p>
+
+<h4>-m [mimetype]</h4>
+
+<h4>--mimetype [mimetype]</h4>
+
+<p>The mimetype to use when parsing incoming data.</p>
+
+<p>Available mimetypes are:</p>
+
+<ul>
+<li>
+<code>text/plain</code>: Publishes each line in a file to redis.</li>
+<li>
+<code>application/json</code>: Publishes each top level item in JSON output to redis.</li>
+</ul><h2>LICENSE</h2>
+
+<p>MIT</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/chrisdickinson">chrisdickinson</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
