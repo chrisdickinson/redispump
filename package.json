@@ -1,6 +1,6 @@
 {
   "name": "redispump",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "pump stdout to redis",
   "main": "index.js",
   "bin": {
